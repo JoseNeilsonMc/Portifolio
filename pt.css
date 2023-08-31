@@ -3,91 +3,108 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
-
 }
 body{
     font-family: liberation sans-serif;
-    background-image: linear-gradient(45deg ,#830404,#000000);
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100vw;
+    background-image: url(https://img.wallpapic-br.com/i9598-527-711/thumb/fotos-realistas-la-voie-maltee-cidade-quebec-imagem-de-fundo.jpg);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
 }
-
 header{
-    position:relative;
-    width: 100%;
-    height: 12.05em;
-    padding: 0.9em 0;
-    border-bottom: 1px solid rgba(255,255,255,0.8);
-
+    width: 100vw;
+    display: inline-block;
+    padding: 0 3rem ;
+    box-shadow: 0 5px 10px black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    
 }
+
 header nav{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 0.7em;
+    padding: 0;
     display: flex;
+    backdrop-filter: blue(100px);
     justify-content: space-between;
     align-items: center;
 }
-header ul{
+header nav ul{
     display: flex;
     list-style: none;
     align-items: center;
-
-}
-header ul a{
-     text-decoration: none;
-     color: #fff;
-     padding: 0 2.0em;
-     text-transform: uppercase;
-     font-weight: 300;
-     font-size: 1.20em;
-}
-.logo{
-    position: relative;
-    top: 0 auto;
-    width: 34.37em;
-    height: 11.25em;
-    filter:drop-shadow(0 0 0.4em rgb(229,229,229));
+    transition: transform 0.3s ease-in-out;
     
 }
-main{
+header ul a{
+    text-decoration: none;
+    color: #fdfafa;
+    padding: 0 2.0em;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.20em;
+}
+ nav ul li {
     position: relative;
-    display: inline-block;
-    height: 100vh;
-    margin: 0.8em auto;
-    bottom: 0.8em;
-    width: 100%;  
+    transition: 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
 }
-section h2{
-    margin-top: 0;
-    font-size: 1.9em;
-    color:#ffffff;
-    text-align: center;
-}
-h1{
-    font-size: 3em;
-    color: #ffffff;
-}
-.container{
-    position: relative;
-    display: flex;
-}
-.imgs{
-    display: flex;
-    width:100px;
-    height: 90px;
-    filter:drop-shadow(0 0 0.4em rgb(229,229,229));
-}
-.container1{
-    position: relative;
-    display: flex;
+ul li:hover{
+    transform: scale(1.25,1.25);
+    transition: 0.5s ease-in-out;
 }
 
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #fdfafa;
+    transition: width 0.5s ease-in-out;
+}
+
+header nav ul li:hover::after {
+    width: calc(100% - 4em);
+}
+
+
+.logo{
+    position: relative;
+    filter:drop-shadow(0 0 0.4em rgb(229,229,229));
+    width: 15rem;
+    height: 100px;
+
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.name h1 {
+    color:#fff;
+    font-size: 3rem;
+    margin: 0; 
+}
+
+.name .btn {
+    align-self: flex-start; 
+    margin-top: 4rem;
+}
 .texto{
     position: relative;
-    width: 100%;
-    padding: 1%;
-    margin: 6%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -97,61 +114,34 @@ h1{
     color: #fff;
     text-transform: uppercase;
     font-size: 1.4em;
-    background-image: linear-gradient(45deg ,#000000,#750303);
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
 }
-.imagem-sobre {
-    position: relative;
-    width: 23.75em;
-    margin: 2%;
-    margin-top: 0.8em;
-    margin-right: 10em;
-    border-radius: 0 70px 0 70px;
-    animation: flutuante 10s ease-in-out infinite;
+section{
+    display: grid;
+}
+.section2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "h1 h1 h1"
+                         "sobre-min sobre-min";
+    background-color: #333;
+}
+.section2 h1{
+    grid-area: h1;
+}
+.section2 .sobre-min{
+    grid-area: sobre-min;
+}
+.section2 img{
+    grid-area: img;
+}
+.section2 h2 {
+    grid-area: h2;
 }
 footer{
     background-color: #333;
-    color:#fff;
+    color:#fcf8f8;
     padding: 1.5em;
     text-align: center;
 }
-
-@keyframes flutuante {
-    0%,100%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-50px);
-    }
-}
-@media screen and (max-width: 600px){
-     html{
-        font-size: 10px;
-        width: 100%;
-
-     }
-    nav, a{
-        max-width:100%;
-        flex-direction: column;
-     }
-
-     .logo{
-        width: 40%;
-        height: 90px;
-     }
-     .linguagen, img{
-        width: 7em;
-        padding: 0;
-    
-     }
-     .container,.container1{
-        max-width: 34rem;
-        flex-direction: column;
-     }
-     .imagem-sobre{
-        margin-left: 20%;   
-     }
-
-   } 
