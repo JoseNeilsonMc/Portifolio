@@ -9,15 +9,13 @@
           crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Neilson - Desenvolvedor Web</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link   rel="stylesheet" href="style.css">
-    <script src="script.js"  defer></script>
+    <script type="text/javascript" src="script.js"  defer></script>
+
 </head>
-<body>
-    <main>
-        <header class="text-center">
+<body> 
+    <main  class="particles-js-canvas-el" id="particles-js">
+        <header>
             <nav>
                 <img src="imagens/foto-logo.png" alt="Neilson logo" class="logo">
                 <ul>
@@ -47,9 +45,7 @@
             </nav>    
      
         </header>
-        
-         
-             <section class="section1"id="section1">
+             <section>
                 <div class="name">
                  <h1 class="typewriter">I´m José Neilson</h1> 
                  <h2>Desenvolvedor Web</h2>
@@ -62,10 +58,7 @@
                  </p>
      
               <button class="btn" id="btn">Saiba Mais</button>
-             </div>  
-             
-             
-             
+                </div>   
              </section>
          </main>
      
@@ -103,31 +96,51 @@
                <div class="container">
                 <img src="imagens/html5.png" class="tecs" style="width: 90px;" id="htmlImg" alt="Html5">
                 <div class="overlay">
-                    <p>Descrição para HTML5</p>
+                    <p class="text-center">HTML5 é a quinta versão da Linguagem de Marcação de Hipertexto (HTML),<br>
+                       utilizada na construção e estruturação de páginas web. Introduziu novos elementos e<br>
+                       atributos, oferecendo maior suporte para multimídia, gráficos e aplicativos interativos.</p>
                 </div>
                </div>
                <div class="container">
                 <img src="imagens/css3.png" class="tecs" style="width: 120px;" id="cssImg" alt="Css3">
                 <div class="overlay">
-                    <p>Descrição para HTML5</p>
+                    <p>CSS3, ou Cascading Style Sheets 3, é a terceira versão das folhas de estilo em cascata,<br>
+                       responsáveis por controlar a apresentação visual de documentos HTML. Oferece recursos avançados,<br>
+                       como transições, animações e sombras, permitindo uma estilização mais sofisticada e responsiva.</p>
                 </div>
                </div>
                <div class="container">
+                <img src="imagens/bootstrap-stack.png" class="tecs" style="width: 120px;" id="bootstrapImg" alt="Bootstrap5">
+                <div class="overlay">
+                    <p>O Bootstrap é um framework de design front-end popular para criar sites e aplicativos responsivos.<br>
+                       Desenvolvido pelo Twitter, ele oferece componentes pré-construídos e de uma forma flexível para facilitar<br>
+                       o desenvolvimento. Sua simplicidade, personalização e compatibilidade com navegadores tornam-no uma escolha<br>
+                       amplamente exigida por desenvolvedores para criar interfaces web modernas e consistentes em diferentes dispositivos.</p>
+                </div>
+                </div>
+               <div class="container">
                 <img src="imagens/javascript.png" class="tecs" style="width: 120px;" id="jsImg" alt="JavaScript">
                 <div class="overlay">
-                    <p>Descrição para HTML5</p>
-                </div>
-                </div>
-                <div class="container">      
-                <img src="imagens/logo-react-icon.png" class="tecs" style="width: 120px;" id="reactImg" alt="React">
-                <div class="overlay">
-                    <p>Descrição para HTML5</p>
+                    <p>JavaScript é uma linguagem de programação de alto nível que possibilita a criação de conteúdo<br>
+                       dinâmico e interativo em páginas web. Executado no navegador do usuário, o JavaScript pode manipular<br>
+                       o conteúdo da página, responder a eventos e facilitar a comunicação com servidores.</p>
                 </div>
                 </div>
                 <div class="container">
+                    <img src="imagens/logo-react-icon.png" class="tecs" style="width: 120px;" id="reactImg" alt="React">
+                    <div class="overlay">
+                        <p>React é uma biblioteca de JavaScript desenvolvida pelo Facebook, utilizada para a construção<br>
+                            de interfaces de usuário (UI) interativas e eficientes. Baseado em componentes reutilizáveis, <br>
+                            React permite a criação de aplicativos web de uma maneira mais modular e fácil de manter.</p>
+                    </div>
+                    </div>
+                <div class="container">
                 <img src="imagens/Git-Icon-1788C.png" class="tecs" style="width: 120px;" id="gitImg" alt="Git">
                 <div class="overlay">
-                    <p>Descrição para HTML5</p>
+                    <p>Git é um sistema de controle de versão distribuído amplamente utilizado no desenvolvimento<br>
+                       de software. Permite que equipes de desenvolvimento colaborem de maneira eficiente, mantendo um<br>
+                       histórico detalhado das alterações no código-fonte. Git facilita o rastreamento de versões, fusão de alterações<br>
+                       e colaboração entre desenvolvedores.</p>
                 </div>
                 </div>
             
@@ -139,5 +152,41 @@
              </p>
          
          </footer>
-     </body>
+         <div id="particles-js"></div> 
+         <!-- stats - count particles -->
+          <div class="count-particles"> 
+            <span class="js-count-particles">--</span> particles </div> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+            <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+             <!-- stats.js lib --> 
+             <script src="particles.js-master/particles.min.js" defer></script>
+
+             <script>
+                //JS Code Here
+                particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"}
+                ,"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}}
+                ,"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable"
+                :false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":
+                {"enable":true,"speed":1,"direction":"bottom-right","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":
+                false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable"
+                :true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":
+                2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+                
+                var count_particles, stats, update;
+                
+                stats = new Stats; stats.setMode(0); 
+                stats.domElement.style.position = 'absolute'; 
+                stats.domElement.style.left = '0px'; 
+                stats.domElement.style.top = '0px'; 
+                document.body.appendChild(stats.domElement); count_particles = 
+                document.querySelector('.js-count-particles'); update = 
+                
+                function() { stats.begin(); stats.end(); 
+                    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) 
+                    { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; }
+                    
+                    requestAnimationFrame(update); 
+                };
+                 requestAnimationFrame(update);;
+                </script>
+</body>
 </html>

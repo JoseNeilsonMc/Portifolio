@@ -5,28 +5,36 @@
  box-sizing: border-box;
 }
 body{
+    position: absolute;
     font-family: liberation sans-serif;
     width: 100vw;
     height: 100vh;
 }
 main{
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(https://www.hdwallpaperslife.com/wp-content/uploads/2018/07/astronaut_2-1280x800.jpg);
+    background-image: url(imagens/background.jpeg);
     background-repeat: no-repeat;
     background-size:100vw 100vh;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed;
     object-fit: cover;
+    z-index: 1;
+    
+}
+.particles-js-canvas-el {
+    position: absolute; /* Change position to absolute */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Set a higher z-index for particles.js */
 }
 header{
     position: relative;
+    z-index: 3;
     width: 100%; 
     padding: 0 3rem ;
     box-shadow: 0 5px 10px black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-    z-index: 1;
-    
 }
 header ul a{
     text-decoration: none;
@@ -105,6 +113,7 @@ nav li:hover::after {
     width: 20px;
     height: 15px;
     margin-right: 5px;
+
 }
 #baixar{
     transform: rotate(90deg);
@@ -115,6 +124,7 @@ nav li:hover::after {
     width: 20rem;
     height: 8rem;
     object-fit:  cover;
+    
 }
 .name {
     position: relative;
@@ -123,6 +133,7 @@ nav li:hover::after {
     align-items: flex-start; 
     padding: 10px;
     margin-bottom: 20px; 
+
 }
 .typewriter {
     overflow: hidden;
@@ -131,6 +142,7 @@ nav li:hover::after {
     font-size: 60px;
     color: #fdfcfc;
     animation: typing 5s steps(18, end)infinite, blink-caret 0.75s step-end infinite;
+
 }
 
 
@@ -159,6 +171,7 @@ nav li:hover::after {
     margin-bottom: 4rem;
     font-size: 2.5rem;
     color: white;
+    
 }
 .name .btn {
     
@@ -173,6 +186,7 @@ nav li:hover::after {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    z-index: 4;
 }
 .btn:hover{
     transform: scale(1.10,1.10);
@@ -194,7 +208,7 @@ nav li:hover::after {
         -1px -1px 0 #000, 
         1px -1px 0 #000,
         -1px 1px 0 #000, 
-        1px 1px 0 #000; 
+        1px 1px 0 #000;
 }
 @media (max-width: 575px)  {
     .texto {
@@ -209,6 +223,7 @@ nav li:hover::after {
     background-color: #f1f1e6;
     align-items: center;
     text-decoration: none;
+    
     
 }
 .section2 ul a{
@@ -229,30 +244,16 @@ nav li:hover::after {
     position: relative;
     width: 100vw;
     height: auto;
-    margin: 0 8% 0 8%;
+    margin: 0% 8%; 
     padding: 2rem;
-    background-color: #020f5c;
+    background-color: rgb(40, 56, 101);
     border-radius: 20px 0 20px 0;
     box-shadow:  10px 10px 15px 0 black;
-    transition: 0.5s ease-in-out;
-
-}
-
-.about::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(45deg, #4CAF50, #2196F3);
-    border-radius: 18px;
- 
+    transition: background 0.5s ease-in-out, transform 0.9s ease-in-out ; 
 }
 .about:hover {
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
     transform: scale(1.05);
-    transition: 0.5s ease-in-out; 
 }
 
 .section2 h2{ 
@@ -301,29 +302,40 @@ nav li:hover::after {
 .section3{
     display: flex;
     position: relative;
-}
-.container{
-    margin: 0;
+    margin: 5rem 0;
+    padding: 0 7em;
     text-align: center;
-}
-
-.tecs{
-    margin: 0;
+    justify-content: space-between;
+       
 }
 .overlay {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.7); 
-    color: #cecb09;
-    border-radius:8px; 
+    display: none;
+    background-color: rgb(40, 56, 101); 
+    color: white;
+    border-radius:0 0 8px 8px;
+    box-shadow: 0 5px 6px 3px black; 
     padding: 20px;
-    text-align: center; 
-    opacity: 0; 
-    transition: opacity 0.3s ease-in-out; 
+    text-align: center;  
+    transition: max-height 0.5s ease;
+    overflow: hidden;
 }
-
 .container:hover .overlay {
-    opacity: 1; 
+    position: relative;
+    max-height: 100%;
+    display: inline-block;
+    animation: overlay 2.5s linear ;
+    transition: max-height 5s ease;
 
+}
+.tecs:hover{
+    
+}
+@keyframes overlay{
+    0%{
+        max-height: 0;
+    }
+    
 }
 footer{
     position: relative;
