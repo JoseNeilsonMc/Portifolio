@@ -11,13 +11,24 @@
     <title>José Neilson - Desenvolvedor Web</title>
     <link   rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"  defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js-master/particles.min.js" defer></script>
 
 </head>
 <body> 
-    <main  class="particles-js-canvas-el" id="particles-js">
+    <main>
+        <div class="particles-js-canvas-el" id="particles-js">
         <header>
             <nav>
                 <img src="imagens/foto-logo.png" alt="Neilson logo" class="logo">
+                <div class="menu-icon">&#9776;</div>
+                <div class="overlay"></div>
                 <ul>
                    <li><a href="imagens/DOC-20231003-WA0013." target="_blank"><img src="imagens/arrow_right_login_icon_183060 (1).png" class="img" id="baixar">Curriculum</a></li>
                    <li><a href="#section2"><img class="img" src="imagens/arrow_right_login_icon_183060 (1).png">About</a></li>    
@@ -25,8 +36,8 @@
                            <li><a href="#"><img src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png" class="img">Projetos</a>
                                <ul>
                                    <li><a href="https://joseneilsonmc.github.io/Conversor_de_Unidade/" target="_blank">Conversor-de-Unidade</a></li>
-                                   <li><a href="#">Relógio-Digital</a></li>
-                                   <li><a href="#">Citações</a></li>
+                                   <li><a href=" https://joseneilsonmc.github.io/Relogio_Digital/">Relógio-Digital</a></li>
+                                   <li><a href=" https://joseneilsonmc.github.io/3_cita-es/">Citações</a></li>
                                </ul>
                            </li>
                        </ul>
@@ -40,12 +51,12 @@
 
                        </ul>     
                    </li>
-               </ul>
+                </ul>
                 
             </nav>    
      
         </header>
-             <section>
+            <section>
                 <div class="name">
                  <h1 class="typewriter">I´m José Neilson</h1> 
                  <h2>Desenvolvedor Web</h2>
@@ -59,40 +70,40 @@
      
               <button class="btn" id="btn">Saiba Mais</button>
                 </div>   
-             </section>
-         </main>
-     
-             <section class="section2" id="section2">
-                
-                <h2>About</h2>
-             <div class="sobre-mim">
-                    
-                     <img src="imagens/foto-pefil.png" alt="Minha Foto de Perfil" class="profile-picture"> 
-                
-             <div class="about"> 
-               <h3>José Neilson</h3>
-                 <p class="web-dev" >Web Desveloper & Web Design Based in Florianópolis</p>
-                 <p class="text-center text-md-start ">
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                 Cumque cum praesentium amet architecto perspiciatis! Quibusdam
-                 labore laudantium corporis quidem id consectetur blanditiis veritatis,
-                 doloremque quisquam pariatur, non dolores voluptate commodi?
-                 </p> 
-                 <ul class="lista">
-                    <li><strong>E-mail:</strong><a href="mailto:neilsonvlcdn@gmail.com?">neilsonvlcdn@gmail.com</a></li>
-                    <li><strong>Telefone:</strong><a href="https://api.whatsapp.com/send?phone=5549998130442&text=Texto%20aqui" target="_blank">(49)99813-0442</a></li>
-                    <li><strong>Residência:</strong> PT-Br</li>
-                 </ul>
-                 <ul class="lista">
-                    <li><strong>Data de Nascimento:</strong>29 de Junho de 1998</li> 
-                    <li><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/JoséNeilson1998">José Neilson</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/JoseNeilsonMc">Meu Github</a></li>
-                    
-                 </ul>
-             </div>   
-             </div> 
             </section>
-             <section class="section3">
+        </div>
+    </main>
+     
+    <section class="section2" id="section2">
+        <h2>About</h2>
+        <div class="sobre-mim">
+            <img src="imagens/foto-pefil.png" alt="Minha Foto de Perfil" class="profile-picture">
+            <div class="about">
+                <h3>José Neilson</h3>
+                <p class="web-dev">Web Developer & Web Designer Based in Florianópolis</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cum praesentium amet architecto
+                    perspiciatis! Quibusdam labore laudantium corporis quidem id consectetur blanditiis veritatis,
+                    doloremque quisquam pariatur, non dolores voluptate commodi?
+                </p>
+                <div class="about-ul">
+                    <ul>
+                        <li><strong>E-mail: </strong><a href="mailto:neilsonvlcdn@gmail.com">neilsonvlcdn@gmail.com</a></li>
+                        <li><strong>Telefone: </strong><a href="https://api.whatsapp.com/send?phone=5549998130442&text=Texto%20aqui" target="_blank">(49)99813-0442</a>
+                        </li>
+                        <li><strong>Residência: </strong> PT-Br</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Nascimento: </strong>Junho de 1998</li>
+                        <li><strong>Linkedin: </strong> <a href="https://www.linkedin.com/in/JoséNeilson1998">José Neilson</a>
+                        </li>
+                        <li><strong>GitHub: </strong> <a href="https://github.com/JoseNeilsonMc">Meu Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="section3">
                <div class="container">
                 <img src="imagens/html5.png" class="tecs" style="width: 90px;" id="htmlImg" alt="Html5">
                 <div class="overlay">
@@ -152,41 +163,5 @@
              </p>
          
          </footer>
-         <div id="particles-js"></div> 
-         <!-- stats - count particles -->
-          <div class="count-particles"> 
-            <span class="js-count-particles">--</span> particles </div> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-            <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-             <!-- stats.js lib --> 
-             <script src="particles.js-master/particles.min.js" defer></script>
-
-             <script>
-                //JS Code Here
-                particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"}
-                ,"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}}
-                ,"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable"
-                :false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":
-                {"enable":true,"speed":1,"direction":"bottom-right","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":
-                false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable"
-                :true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":
-                2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
-                
-                var count_particles, stats, update;
-                
-                stats = new Stats; stats.setMode(0); 
-                stats.domElement.style.position = 'absolute'; 
-                stats.domElement.style.left = '0px'; 
-                stats.domElement.style.top = '0px'; 
-                document.body.appendChild(stats.domElement); count_particles = 
-                document.querySelector('.js-count-particles'); update = 
-                
-                function() { stats.begin(); stats.end(); 
-                    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) 
-                    { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; }
-                    
-                    requestAnimationFrame(update); 
-                };
-                 requestAnimationFrame(update);;
-                </script>
 </body>
 </html>

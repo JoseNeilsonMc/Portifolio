@@ -1,32 +1,32 @@
-
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    position: absolute;
-    font-family: liberation sans-serif;
+
+body {
+    font-family: 'Fira Sans', sans-serif;
     width: 100vw;
     height: 100vh;
 }
-main{
+
+main {
     position: relative;
-    background-image: url(imagens/background.jpeg);
+    background-image: url(imagens/_f1c9c3d4-55e6-40c2-8828-41e34079aedc.jpeg);
     background-repeat: no-repeat;
-    background-size:100vw 100vh;
-    width: 100%;
-    height: 100%;
+    background-size: 100vw 100vh;
     background-attachment: fixed;
     object-fit: cover;
-    z-index: 1;
-    
+    overflow: hidden;
+    z-index: 0;
+    height: 100vh;
 }
+
 .particles-js-canvas-el {
-    position: absolute; /* Change position to absolute */
+    position: absolute; 
     top: 0;
     left: 0;
-    z-index: 2; /* Set a higher z-index for particles.js */
+    z-index: 2;
 }
 header{
     position: relative;
@@ -126,6 +126,57 @@ nav li:hover::after {
     object-fit:  cover;
     
 }
+.menu-icon {
+    display: none; /* Initially hide on larger screens */
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Display the hamburger icon on smaller screens */
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none; /* Hide the menu by default on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 70px; /* Adjust this value based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 2;
+    }
+
+    nav ul.active {
+        display: flex; /* Display the menu when active */
+    }
+
+    nav li {
+        width: 100%; /* Make each menu item full width */
+        text-align: center;
+    }
+
+    /* Restyle your navigation items for smaller screens as needed */
+
+    .overlay.active {
+        display: block;
+    }
+    header {
+        padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
+}
 .name {
     position: relative;
     display: flex;
@@ -210,81 +261,80 @@ nav li:hover::after {
         -1px 1px 0 #000, 
         1px 1px 0 #000;
 }
-@media (max-width: 575px)  {
-    .texto {
-        font-size: 1em;
-        padding: 0;
-    }
-}
 .section2 {
     position: relative;
     width: 100vw;
     height: 100vh;
     background-color: #f1f1e6;
-    align-items: center;
     text-decoration: none;
-    
-    
 }
-.section2 ul a{
+
+.section2 .about-ul {
+    display: inline;
+    justify-content: space-between;
+}
+.section2 ul a {
     text-decoration: none;
     text-transform: uppercase;
-    transition:0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     font-weight: 400;
     font-size: 1.1rem;
     color: rgb(219, 219, 2);
 }
+
 .sobre-mim {
     width: 100%;
     align-items: center;
     display: flex;
     color: white;
 }
-.about{
+
+.about {
     position: relative;
-    width: 100vw;
-    height: auto;
-    margin: 0% 8%; 
+    margin: 0% 8%;
     padding: 2rem;
     background-color: rgb(40, 56, 101);
     border-radius: 20px 0 20px 0;
-    box-shadow:  10px 10px 15px 0 black;
-    transition: background 0.5s ease-in-out, transform 0.9s ease-in-out ; 
+    box-shadow: 10px 10px 15px 0 black;
+    transition:0.5s ease-in-out;
 }
+
 .about:hover {
-    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    background: linear-gradient( #4CAF50, #2196F3);
+    color: black;
     transform: scale(1.05);
 }
 
-.section2 h2{ 
-    display:block;
-    font-size:6rem;
+.section2 h2 {
+    display: block;
+    font-size: 6rem;
     text-align: center;
     letter-spacing: 8px;
-    color:#14151a;
-    text-shadow:
-    -6px 1px 0px #cecb09,
-    -12px 4px 5px black;
+    color: #14151a;
+    text-shadow: -6px 1px 0px #cecb09, -12px 4px 5px black;
     background-color: transparent;
 }
-.about h3{
-    font-size: 3.5rem; 
-    font-weight: 600; 
-    margin: 10px; 
-    padding: 10px;
 
+.about h3 {
+    font-family: 'Allura', cursive;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px;
 }
-.about .web-dev{
+
+.about .web-dev {
     font-size: 1.2rem;
 }
-.about ul{
+
+.about ul {
     position: relative;
     display: inline-block;
-    list-style: none ;
+    list-style: none;
     margin: 1% 5% 1% 5%;
 }
 
-.section2 p{
+.section2 p {
     position: relative;
     padding: 10px;
     letter-spacing: 3px;
@@ -292,27 +342,39 @@ nav li:hover::after {
     font-weight: 800;
     text-transform: uppercase;
 }
-.profile-picture{
+
+.profile-picture {
     position: relative;
     width: 400px;
     height: auto;
     margin: 8%;
-    object-fit:  cover;
+    object-fit: cover;
 }
 .section3{
     display: flex;
+    /*flex-wrap: wrap;*/
     position: relative;
-    margin: 5rem 0;
-    padding: 0 7em;
+    top: 0;
+    margin:4rem 0 4rem 0;
+    padding: 0 1em;
     text-align: center;
     justify-content: space-between;
        
 }
+.container {
+    flex: 1;
+}
+.section3:hover{
+    cursor: pointer;
+    width: 100vw;
+    height: 100vh;
+}
 .overlay {
     position: relative;
     display: none;
-    background-color: rgb(40, 56, 101); 
-    color: white;
+    margin: 10%;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    color: black;
     border-radius:0 0 8px 8px;
     box-shadow: 0 5px 6px 3px black; 
     padding: 20px;
@@ -326,16 +388,17 @@ nav li:hover::after {
     display: inline-block;
     animation: overlay 2.5s linear ;
     transition: max-height 5s ease;
-
-}
-.tecs:hover{
-    
 }
 @keyframes overlay{
     0%{
         max-height: 0;
     }
     
+}
+.container:hover .tecs{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 0.4em rgb(3, 3, 3));
+    transition: 1s ease;
 }
 footer{
     position: relative;
