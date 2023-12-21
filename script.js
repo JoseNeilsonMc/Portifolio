@@ -12,10 +12,12 @@ particlesJS("particles-js", {"particles":{"number":{"value":147,"density":
 {"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":
 {"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 var count_particles, stats, update;
- stats = new stats; stats.setMode(0);
+ stats = new Stats;
+  stats.setMode(0);
   stats.domElement.style.position = 'absolute';
    stats.domElement.style.left = '0px'; 
-   stats.domElement.style.top = '0px'; 
+   stats.domElement.style.top = '0px';
+   stats.domElement.style.display ='none' 
    
    document.body.appendChild(stats.domElement); count_particles = 
    document.querySelector('.js-count-particles'); update = 
@@ -25,24 +27,18 @@ var count_particles, stats, update;
        requestAnimationFrame(update);;
 
 
+/*
+
+
        document.addEventListener('DOMContentLoaded', function () {
         const menuIcon = document.querySelector('.menu-icon');
-        const navMenu = document.querySelector('nav ul');
-        const overlay = document.querySelector('.overlay');
+        const nav = document.querySelector('nav');
+        const hoverlay = document.querySelector('.hoverlay');
+        const navList = document.querySelector('nav ul');
     
         menuIcon.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
-    
-        overlay.addEventListener('click', function () {
-            navMenu.classList.remove('active');
-            overlay.classList.remove('active');
+            navList.classList.toggle('active');
+            hoverlay.classList.toggle('active');
         });
     });
-
-
-
-
-
-
+    */

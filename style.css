@@ -35,6 +35,8 @@ header{
     padding: 0 3rem ;
     box-shadow: 0 5px 10px black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
 }
 header ul a{
     text-decoration: none;
@@ -45,9 +47,7 @@ header ul a{
 }
 header nav {
     display: flex;
-    backdrop-filter: blur(5px);
     justify-content: space-between;
-    align-items: center;
 
 }
 nav ul{
@@ -109,6 +109,14 @@ nav li:hover::after {
     background-color: rgb(250, 250, 248);
     width: calc(100% - 2.5rem);
 } 
+.btn-abrir{
+    width: 50px;
+}
+#btn-abrir {
+    display: block;
+    color: white;
+}
+
 .img{
     width: 20px;
     height: 15px;
@@ -126,64 +134,51 @@ nav li:hover::after {
     object-fit:  cover;
     
 }
-.menu-icon {
-    display: none; /* Initially hide on larger screens */
-}
-
-/* Overlay styles */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Display the hamburger icon on smaller screens */
-        cursor: pointer;
-    }
-
-    nav ul {
-        display: none; /* Hide the menu by default on smaller screens */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 70px; /* Adjust this value based on your header height */
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 2;
-    }
-
-    nav ul.active {
-        display: flex; /* Display the menu when active */
-    }
-
-    nav li {
-        width: 100%; /* Make each menu item full width */
-        text-align: center;
-    }
-
-    /* Restyle your navigation items for smaller screens as needed */
-
-    .overlay.active {
-        display: block;
-    }
+@media screen and (400px <= width <= 991px) {
     header {
-        padding: 0 1rem; /* Adjust padding for smaller screens */
+        width: 100%;
+        padding: 0 1.5rem 0  0;
     }
+    header nav ul{
+        display: none;
+        background-color: gray;
+    }
+    nav li:hover::after {
+        display: none;
+    }
+    
+    #btn-abrir {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: end;
+        
+    }
+    .btn-abrir{
+        width: 50px;
+    }
+    nav ul li {
+        
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .logo {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100px;
+    }
+    
 }
+
 .name {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     padding: 10px;
-    margin-bottom: 20px; 
+
 
 }
 .typewriter {
@@ -191,6 +186,8 @@ nav li:hover::after {
     white-space: nowrap;
     border-right: 3px solid transparent;
     font-size: 60px;
+    font-weight: 600;
+    font-family: 'Allura', cursive;
     color: #fdfcfc;
     animation: typing 5s steps(18, end)infinite, blink-caret 0.75s step-end infinite;
 
@@ -219,7 +216,7 @@ nav li:hover::after {
     }
 }
 .name h2{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     color: white;
     
@@ -261,12 +258,33 @@ nav li:hover::after {
         -1px 1px 0 #000, 
         1px 1px 0 #000;
 }
+@media screen and (400px <= width <= 991px) {
+    .section1 {
+        flex-direction: column;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .name .btn {
+        position: relative;
+        margin-top: 15%;
+        width: 50vw;
+        height: 90px;
+
+    }
+    .texto{
+        width:calc(100vw - 10%);
+    }
+    
+} 
+ 
 .section2 {
     position: relative;
-    width: 100vw;
-    height: 100vh;
     background-color: #f1f1e6;
     text-decoration: none;
+    padding-bottom: 2rem;
+    overflow: hidden;
 }
 
 .section2 .about-ul {
@@ -283,15 +301,17 @@ nav li:hover::after {
 }
 
 .sobre-mim {
-    width: 100%;
+    width: 100vw;
     align-items: center;
+    justify-content: center;
     display: flex;
     color: white;
 }
 
 .about {
     position: relative;
-    margin: 0% 8%;
+    width: 100vw;
+    margin: 0 8%;
     padding: 2rem;
     background-color: rgb(40, 56, 101);
     border-radius: 20px 0 20px 0;
@@ -350,11 +370,30 @@ nav li:hover::after {
     margin: 8%;
     object-fit: cover;
 }
+@media screen and (400px <= width <= 991px) {
+    .sobre-mim{
+        position: relative;
+        width: 100vw;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .about {
+        position: relative;
+        width: 80vw;
+        margin:0;
+        
+    }
+    .profile-picture {
+        position: relative;
+        width: 250px;
+        height: 200px;
+        margin: 8%;
+        object-fit: cover;
+}
+}
 .section3{
     display: flex;
-    /*flex-wrap: wrap;*/
-    position: relative;
-    top: 0;
+    flex-wrap: wrap;
     margin:4rem 0 4rem 0;
     padding: 0 1em;
     text-align: center;
@@ -362,6 +401,7 @@ nav li:hover::after {
        
 }
 .container {
+    position: relative;
     flex: 1;
 }
 .section3:hover{
@@ -402,7 +442,6 @@ nav li:hover::after {
 }
 footer{
     position: relative;
-    width: 100vw;
     padding: 10px;
     background-color: #615252;
     color:#fcf8f8;
