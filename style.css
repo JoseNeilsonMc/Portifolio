@@ -12,7 +12,7 @@ body {
 
 main {
     position: relative;
-    background-image: url(imagens/_f1c9c3d4-55e6-40c2-8828-41e34079aedc.jpeg);
+    background-image: url(imagens/background-image.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
