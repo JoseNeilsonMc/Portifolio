@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="particles.js-master/particles.min.js" defer></script>
     <script type="text/javascript" src="script.js"  defer></script>
+    <script type="text/javascript" src="script1.js"  defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
@@ -30,12 +31,13 @@
                
                 <nav>
                     <img src="imagens/foto-logo.png" alt="Neilson logo" class="logo">
-                    <div href="#" id="btn-abrir"><img src="imagens/icon-burguer.png" alt="icon-burguer" class="btn-abrir"></div>
-                    <ul>
+                    <div href="#" id="btn-abrir" class="escondido"><img src="imagens/icon-burguer.png" alt="icon-burguer" class="btn-abrir"></div>
+                    <ul id="menu">
+                        <div id="btn-fechar">X</div>
                        <li><a href="imagens/DOC-20231003-WA0013." target="_blank"><img src="imagens/arrow_right_login_icon_183060 (1).png" alt="icon-baixar" class="img" id="baixar">Curriculum</a></li>
                        <li><a href="#section2"><img class="img" alt="icon-sobre" src="imagens/arrow_right_login_icon_183060 (1).png">About</a></li>    
                            <ul class="submenu">
-                               <li><a href="#"><img alt="icon-projetos" src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png">Projetos</a>
+                               <li><a href="#"><img src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png" class="img" alt="icon-projetos">Projetos</a>
                                    <ul>
                                        <li><a href="https://joseneilsonmc.github.io/Conversor_de_Unidade/" target="_blank">Conversor-de-Unidade</a></li>
                                        <li><a href=" https://joseneilsonmc.github.io/Relogio_Digital/">Relógio-Digital</a></li>

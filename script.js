@@ -25,20 +25,3 @@ var count_particles, stats, update;
      { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; }
       requestAnimationFrame(update); };
        requestAnimationFrame(update);;
-
-
-/*
-
-
-       document.addEventListener('DOMContentLoaded', function () {
-        const menuIcon = document.querySelector('.menu-icon');
-        const nav = document.querySelector('nav');
-        const hoverlay = document.querySelector('.hoverlay');
-        const navList = document.querySelector('nav ul');
-    
-        menuIcon.addEventListener('click', function () {
-            navList.classList.toggle('active');
-            hoverlay.classList.toggle('active');
-        });
-    });
-    */
