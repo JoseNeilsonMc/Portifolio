@@ -24,6 +24,8 @@ main {
 
 .particles-js-canvas-el {
     position: absolute; 
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 2;
@@ -388,32 +390,38 @@ nav li:hover::after {
     .sobre-mim{
         position: relative;
         width: 100vw;
-        margin-bottom: 30px;
         flex-direction: column;
     }
     .about {
-        position: relative;
-        width: 70vw;
-        height: 80%;
-        margin:0;
-        
+        width: 80vw;
+        margin: 10% 5%;
+        padding: 0.5rem;
     }
+
+    .about h3 {
+        font-size: 4rem;
+    }
+
+    .about p,
+    .about p {
+        font-size: 0.9rem;
+    }
+
     .about-ul {
         flex-direction: column;
-    }   
+    }
     .profile-picture {
         position: relative;
-        width: 250px;
-        height: 200px;
+        width: 400px;
+        height: 300px;
         margin: 8%;
         object-fit: cover;
-}
+    }
 }
 .section3{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap ;
     margin:4rem 0 4rem 0;
-    padding: 0 1em;
     text-align: center;
     justify-content: space-between;
        
@@ -425,11 +433,13 @@ nav li:hover::after {
 .section3:hover{
     cursor: pointer;
     width: 100vw;
-    height: 100vh;
+    height: 100vh;    
 }
 .overlay {
     position: relative;
     display: none;
+    width: 100vw;
+    height: auto;
     margin: 10%;
     background: linear-gradient(45deg, #4CAF50, #2196F3);
     color: black;
@@ -437,15 +447,16 @@ nav li:hover::after {
     box-shadow: 0 5px 6px 3px black; 
     padding: 20px;
     text-align: center;  
-    transition: max-height 0.5s ease;
+    transition: max-height 0.3s ease;
     overflow: hidden;
+    justify-content: center;
 }
 .container:hover .overlay {
     position: relative;
-    max-height: 100%;
+    /*max-height: 100vh;*/
     display: inline-block;
-    animation: overlay 1.5s linear ;
-    transition: max-height 5s ease;
+    animation: overlay 0.5s linear ;
+    transition: max-height 3s ease;
 }
 @keyframes overlay{
     0%{
@@ -454,15 +465,51 @@ nav li:hover::after {
     
 }
 .container:hover .tecs{
+    margin: 1rem;
     transform: scale(1.2);
     filter: drop-shadow(0 0 0.4em rgb(3, 3, 3));
     transition: 1s ease;
 }
+@media screen and (400px <= width <= 991px){
+    .section3{
+        display: flex;
+        flex-wrap: nowrap ;
+        margin:4rem 0 4rem 0;
+        text-align: center;
+        justify-content: space-between;
+           
+    }
+    .container{
+        width: 100vw;
+        
+    }
+      .overlay{
+        justify-content: center;
+        margin: 1rem 1rem;
+      }
+      .prev, .next {
+        position:fixed;
+        
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        color: rgb(5, 5, 5);
+      }
+  
+      .prev {
+        left: 10px;
+      }
+  
+      .next {
+        right: 10px;
+      } 
+    
+}
+
 footer{
     position: relative;
     padding: 10px;
     background-color: #615252;
     color:#fcf8f8;
-    padding: 1.5em;
     text-align: center;
 }
