@@ -12,7 +12,7 @@ particlesJS("particles-js", {"particles":{"number":{"value":147,"density":
 {"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":
 {"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 var count_particles, stats, update;
- stats = new Stats;
+ stats = new stats;
   stats.setMode(0);
   stats.domElement.style.position = 'absolute';
    stats.domElement.style.left = '0px'; 
