@@ -1,6 +1,6 @@
-# Portif-lio
+# Portifólio
 
-Explorando Sempre: O Aprendizado Contínuo no Desenvolvimento Web
+<h1>Explorando Sempre: O Aprendizado Contínuo no Desenvolvimento Web</h1>
 
 Em minha jornada no desenvolvimento web, aprimoro constantemente 
 meu conhecimento em CSS, HTML e JavaScript puro. Cada projeto é uma oportunidade
